@@ -61,7 +61,7 @@ class TransactionRow(Base):
     amount: Mapped[Decimal] = mapped_column(Money)
     account_id: Mapped[int] = mapped_column(ForeignKey("accounts.id"))
     account: Mapped[Account] = relationship(back_populates="rows")
-   
+
 
 engine = create_engine(DATABASE_URL)
 
